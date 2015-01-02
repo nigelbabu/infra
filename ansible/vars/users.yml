@@ -83,8 +83,3 @@ users:
   dfowler:
     name: 'dfowler'
     keys:
-      - dfowler
-  caleb:
-    name: 'caleb'
-    authorized_keys:
-      - caleb

@@ -1,10 +1,9 @@
 ---
-user_groups:
+groups:
   sysadmin:
     - rgrp
     - okfn
     - nigelb
-    - matt
   ckan_dev:
     - amercader
     - joetsoi
