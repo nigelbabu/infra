@@ -8,4 +8,4 @@ ansible-playbook --verbose main.yml -i inventory/hosts --sudo --tags=
 
 ## Variables
 
-devs_group
+user
