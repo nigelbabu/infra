@@ -1,10 +1,11 @@
-groups:
+---
+user_groups:
   sysadmin:
-    - joel.re
     - rgrp
     - okfn
     - nigelb
     - matt
+    - adam
 
   ckan_dev:
     - amercader

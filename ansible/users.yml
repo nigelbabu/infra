@@ -1,0 +1,10 @@
+- hosts: s139.okserver.org
+  sudo: true
+  gather_facts: no
+  vars_files:
+    - vars/users.yml
+    - vars/groups.yml
+    - "{{ private_dir }}/p.yml"
+  roles:
+    - { role: users, tags: ['users'] }
+

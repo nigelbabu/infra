@@ -1,0 +1,11 @@
+- name: Add group - {{ group }}
+  #group: name={{ group }} state=present
+  debug: var=group
+
+- name: Add {{ item }}
+  debug: var=item
+  with_items: user_groups[group]
+
+- name: Add {{ item}}'s keys
+  debug: msg="{{ this is my key file - users[item]['authorized_keys'].pub }}"
+  with_nested: user_groups[group]
