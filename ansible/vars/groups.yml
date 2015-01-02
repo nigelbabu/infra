@@ -1,0 +1,35 @@
+groups:
+  sysadmin:
+    - joel.re
+    - rgrp
+    - okfn
+    - nigelb
+    - matt
+
+  ckan_dev:
+    - amercader
+    - joetsoi
+    - vitor
+    - tryggvib
+    - brook
+
+  openspending_dev:
+    - vitor
+    - tryggvib
+    - stefan
+    - holger
+
+  labs_dev:
+    - rowan.crawford
+    - joost.cassee
+    - yohan.boniface
+    - ross.jones
+    - pudo
+    - pierre.yves
+    - umbrich
+    - tonyh
+    - caleb
+
+  monitoring:
+    - nagios
+

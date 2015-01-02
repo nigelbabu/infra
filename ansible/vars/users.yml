@@ -1,110 +1,90 @@
 ---
-#
 users:
-  sysadmin:
-    - name: 'rgrp'
-      group: 'sysadmin'
-      authorized_keys:
-        - rgrp
-    - name: 'okfn'
-      group: 'sysadmin'
-      authorized_keys:
-        - okfn
-    - name: 'nigelb'
-      group: 'sysadmin'
-      authorized_keys:
-        - nigelb
-    - name: 'matt'
-      group: 'sysadmin'
-      authorized_keys:
-        - matt
-
-  ckan_dev:
-    - name: 'amercader'
-      group: 'ckan_dev'
-      authorized_keys:
-        - amercader
-    - name: 'joetsoi'
-      group: 'ckan_dev'
-      authorized_keys:
-        - joetsoi
-    - name: 'vitor'
-      group: 'ckan_dev'
-      authorized_keys:
-        - vitor
-    - name: 'tryggvib'
-      group: 'ckan_dev'
-      authorized_keys:
-        - tryggvib
-    - name: 'brook'
-      group: 'ckan_dev'
-      authorized_keys:
-        - brook
-
-  openspending_dev:
-    - name: 'vitor'
-      group: 'openspending_dev'
-      authorized_keys:
-        - vitor
-    - name: 'tryggvib'
-      group: 'openspending_dev'
-      authorized_keys:
-        - tryggvib
-    - name: 'stefan'
-      group: 'openspending_dev'
-      authorized_keys:
-        - stefan
-    - name: 'holger'
-      group: 'openspending_dev'
-      authorized_keys:
-        - holger
-
-  labs_dev:
-    - name: 'rowan.crawford'
-      group: 'labs_dev'
-      authorized_keys:
-        - rowan.crawford
-    - name: 'joost.cassee'
-      group: 'labs_dev'
-      authorized_keys:
-        - joost.cassee
-    - name: 'yohan.boniface'
-      group: 'labs_dev'
-      authorized_keys:
-        - yohan.boniface
-    - name: 'ross.jones'
-      group: 'labs_dev'
-      authorized_keys:
-        - ross.jones
-    - name: 'pudo'
-      group: 'labs_dev'
-      authorized_keys:
-        - pudo
-    - name: 'pierre.yves'
-      group: 'labs_dev'
-      authorized_keys:
-        - pierre.yves
-    - name: 'umbrich'
-      group: 'labs_dev'
-      authorized_keys:
-        - umbrich
-    - name: mihi
-      authorized_keys:
-        - mihi
-    - name: tonyh
-      authorized_keys:
-        - tonyh
-    - name: dfowler
-      group: 'labs_dev'
-      authorized_keys:
-        - dfowler
-    - name: caleb
-      group: 'labs_dev'
-      authorized_keys:
-        - caleb
-
-  monitoring:
-    - name: 'nagios'
-      group: 'monitoring'
-      authorized_keys:
-        - nagios
+  rgrp:
+    name: 'rgrp'
+    authorized_keys:
+      - rgrp
+  okfn:
+    name: 'okfn'
+    authorized_keys:
+      - okfn
+  nigelb:
+    name: 'okfn'
+    authorized_keys:
+      - nigelb
+  matt:
+    name: 'matt'
+    authorized_keys:
+      - matt
+  amercader:
+    name: 'matt'
+    authorized_keys:
+      - amercader
+  joetsoi:
+    name: 'joetsoi'
+    authorized_keys:
+      - joetsoi
+  vitor:
+    name: 'vitor'
+    authorized_keys:
+      - vitor
+  tryggvib:
+    name: 'tryggvib'
+    authorized_keys:
+      - tryggvib
+  brook:
+    name: 'brook'
+    authorized_keys:
+      - brook
+  stefan:
+    name: 'stefan'
+    authorized_keys:
+      - stefan
+  holger:
+    name: 'holger'
+    authorized_keys:
+      - holger
+  rowan:
+    name: 'rowan.crawford'
+    authorized_keys:
+      - rowan.crawford
+  joost:
+    name: 'joost.cassee'
+    authorized_keys:
+      - joost.cassee
+  yohan.boniface:
+    name: 'yohan.boniface'
+    authorized_keys:
+      - yohan.boniface
+  ross:
+    name: 'ross.jones'
+    authorized_keys:
+      - ross.jones
+  pudo:
+    name: 'pudo'
+    authorized_keys:
+      - pudo
+  pierre.yves:
+    name: 'pierre.yves'
+    authorized_keys:
+      - pierre.yves
+  umbrich:
+    name: 'umbrich'
+    authorized_keys:
+      - umbrich
+  tonyh:
+    name: 'tonyh'
+    authorized_keys:
+      - tonyh
+  nagios:
+    name: 'nagios'
+    authorized_keys:
+      - nagios
+  dfowler:
+    name: 'dfowler'
+    authorized_keys:
+      - dfowler
+  caleb:
+    name: 'caleb'
+    authorized_keys:
+      - caleb
