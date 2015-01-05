@@ -3,6 +3,9 @@
 #this config file is placed by ansible, look in the scripts role for mysql related scripts
 #this script expects /root/.my.cnf to be in place with the passwords
 
+set -o errexit
+set -o pipefail
+set -o nounset
 backup_config=/opt/scripts/backup/mysql_backup.conf
 backup_dir=/root/mysql_backups
 db_host=localhost
@@ -56,10 +59,10 @@ then
                                 /usr/bin/rsync ${backup_dir}/${backup_archive} rsync://${rsync_target}/mysql_backups/
                         fi
                 fi
-	{% if mysql_snitch %}
+    {% if mysql_snitch %}
         curl "https://nosnch.in/{{ mysql_snitch }}" &> /dev/null
-	{% endif %}
-	done
+    {% endif %}
+    done
 else
         echo "$backup_config not found, please check if you've defined the dbs to be backed up in ansible."
         exit 1
