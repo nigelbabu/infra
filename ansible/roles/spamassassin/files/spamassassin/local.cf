@@ -15,10 +15,13 @@
 #   modifying the original message (0: off, 2: use text/plain instead)
 #
 # report_safe 1
- 
+
 # Whitelist okfn emails
 whitelist_from *@okfn.org
- 
+
+# Blacklist abuse@okfn.org emails
+unwhitelist_from abuse@okfn.org
+
 #   Set which networks or hosts are considered 'trusted' by your mail
 #   server (i.e. not spammers)
 #
@@ -54,7 +57,7 @@ whitelist_from *@okfn.org
 
 
 #   Some shortcircuiting, if the plugin is enabled
-# 
+#
 ifplugin Mail::SpamAssassin::Plugin::Shortcircuit
 #
 #   default: strongly-whitelisted mails are *really* whitelisted now, if the
