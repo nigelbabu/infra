@@ -17,8 +17,9 @@
 - name: add firewall rule for check_mk
   lineinfile: dest="{{ iptables_config_file }}"
               regexp='dport "{{ check_mk_port }}" -j monitoring$'
-              line='-A INPUT -s "{{ monitoring_server }}" -p tcp -m tcp --dport "{{ check_mk_port }}" -j monitoring' insertbefore='^COMMIT' state=present
+              line='-A INPUT -s "{{ monitoring_server }}" -p tcp -m tcp --dport "{{ check_mk_port }}" -j monitoring' insertbefore='^#HOOK' state=present
   notify: restart iptables-persistent
+  tags: check-mk-iptables
 
 - name: setup_plugin_checks
   copy: src={{ item }}

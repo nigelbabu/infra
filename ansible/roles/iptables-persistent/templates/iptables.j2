@@ -22,7 +22,6 @@
 -A INPUT -i lo -j ACCEPT
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 22 -j admin
--A INPUT -j DROP
 
 -A fail2ban-ssh -j RETURN
 -A admin -j ACCEPT
@@ -57,7 +56,6 @@
 -A INPUT -p tcp -m tcp --dport 80 -j application
 -A INPUT -p tcp -m tcp --dport 443 -j application
 {% endif %}
-{% endif %}
 {%if hostvars[inventory_hostname]['ban_abusive_ips'] is defined %}
 {% for ip in hostvars[inventory_hostname]['ban_abusive_ips'] %}
 -A INPUT -s {{ ip }} -j ban_abusive_ips
@@ -70,5 +68,6 @@
 {% endfor %}
 {% endif %}
 
-
+#HOOK (used for adding new entries from roles - eg: check-mk-agent)
+-A INPUT -j DROP
 COMMIT
