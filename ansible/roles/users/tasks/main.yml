@@ -1,2 +1,16 @@
----
-- include: group.yml group=sysadmin
+- name: Add group - {{ group }}
+  #group: name={{ group }} state=present
+  debug: var=group
+
+- name: Add users in {{ group }}
+  debug: var={{ users[item].name }}
+  with_items: user_groups[group]
+
+- name: Add {{ group }} user keys
+  debug: var=item
+  #debug: var="{{ lookup('file', inventory_dir + '/../files/keys/' + item + '.pub') | join("\n") }}"
+  #debug: var="{{ lookup('file', inventory_dir + '/../files/keys/' + users[item].keys + '.pub') }}"
+  with_filteredsubelements:
+    - users
+    - "{{ user_groups[group] }}"
+    - 'keys'

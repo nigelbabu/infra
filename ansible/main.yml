@@ -4,6 +4,7 @@
   sudo: true
   vars_files:
     - vars/users.yml
+    - vars/groups.yml
     - "{{ private_dir }}/p.yml"
   roles:
     - { role: check-mk-agent, tags: ['check-mk-agent'] }
@@ -16,7 +17,7 @@
     - { role: knopki.timezone, tags: ['time'] }
     - { role: bennojoy.ntp, tags: ['time'] }
     - { role: update-notifier, tags: ['update-notifier'] }
-    - { role: users, tags: ['users'] }
+    - { role: users, group: 'sysadmin', tags: ['users'] }
     - { role: sudo , tags: ['sudo'] }
     - { role: db-backup, tags: ['db-backup'] }
     - { role: apt-mirror-config, tags: ['apt-mirror-config'] }
@@ -40,7 +41,7 @@
   sudo: true
   vars_files:
     - "{{ private_dir }}/p.yml"
-  roles: 
+  roles:
     - { role: rt, tags: ['rt'] }
     - { role: postfix, tags: ['postfix'] }
     - { role: nginx, tags: ['nginx'] }
