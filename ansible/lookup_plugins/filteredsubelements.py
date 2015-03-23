@@ -58,5 +58,4 @@ class LookupModule(object):
             sublist = v.pop(subelement, [])
             for item1 in sublist:
                 ret.append((v, item1))
-
         return ret
