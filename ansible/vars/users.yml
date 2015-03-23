@@ -2,87 +2,87 @@
 users:
   rgrp:
     name: 'rgrp'
-    authorized_keys:
+    keys:
       - rgrp
   okfn:
     name: 'okfn'
-    authorized_keys:
+    keys:
       - okfn
   nigelb:
-    name: 'okfn'
-    authorized_keys:
+    name: 'nigelb'
+    keys:
       - nigelb
   matt:
     name: 'matt'
-    authorized_keys:
+    keys:
       - matt
   amercader:
     name: 'matt'
-    authorized_keys:
+    keys:
       - amercader
   joetsoi:
     name: 'joetsoi'
-    authorized_keys:
+    keys:
       - joetsoi
   vitor:
     name: 'vitor'
-    authorized_keys:
+    keys:
       - vitor
   tryggvib:
     name: 'tryggvib'
-    authorized_keys:
+    keys:
       - tryggvib
   brook:
     name: 'brook'
-    authorized_keys:
+    keys:
       - brook
   stefan:
     name: 'stefan'
-    authorized_keys:
+    keys:
       - stefan
   holger:
     name: 'holger'
-    authorized_keys:
+    keys:
       - holger
   rowan:
     name: 'rowan.crawford'
-    authorized_keys:
+    keys:
       - rowan.crawford
   joost:
     name: 'joost.cassee'
-    authorized_keys:
+    keys:
       - joost.cassee
-  yohan.boniface:
+  yohan:
     name: 'yohan.boniface'
-    authorized_keys:
+    keys:
       - yohan.boniface
   ross:
     name: 'ross.jones'
-    authorized_keys:
+    keys:
       - ross.jones
   pudo:
     name: 'pudo'
-    authorized_keys:
+    keys:
       - pudo
-  pierre.yves:
+  pierre:
     name: 'pierre.yves'
-    authorized_keys:
+    keys:
       - pierre.yves
   umbrich:
     name: 'umbrich'
-    authorized_keys:
+    keys:
       - umbrich
   tonyh:
     name: 'tonyh'
-    authorized_keys:
+    keys:
       - tonyh
   nagios:
     name: 'nagios'
-    authorized_keys:
+    keys:
       - nagios
   dfowler:
     name: 'dfowler'
-    authorized_keys:
+    keys:
       - dfowler
   caleb:
     name: 'caleb'

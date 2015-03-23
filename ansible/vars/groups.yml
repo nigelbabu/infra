@@ -5,21 +5,17 @@ user_groups:
     - okfn
     - nigelb
     - matt
-    - adam
-
   ckan_dev:
     - amercader
     - joetsoi
     - vitor
     - tryggvib
     - brook
-
   openspending_dev:
     - vitor
     - tryggvib
     - stefan
     - holger
-
   labs_dev:
     - rowan
     - joost
@@ -30,6 +26,5 @@ user_groups:
     - umbrich
     - tonyh
     - caleb
-
   monitoring:
     - nagios
