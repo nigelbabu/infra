@@ -83,3 +83,4 @@ users:
   dfowler:
     name: 'dfowler'
     keys:
+      - dfowler
