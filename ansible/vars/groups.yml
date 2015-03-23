@@ -21,16 +21,15 @@ user_groups:
     - holger
 
   labs_dev:
-    - rowan.crawford
-    - joost.cassee
-    - yohan.boniface
-    - ross.jones
+    - rowan
+    - joost
+    - yohan
+    - ross
     - pudo
-    - pierre.yves
+    - pierre
     - umbrich
     - tonyh
     - caleb
 
   monitoring:
     - nagios
-
