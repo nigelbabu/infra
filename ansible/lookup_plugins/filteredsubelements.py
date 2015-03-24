@@ -34,36 +34,29 @@ class LookupModule(object):
             raise errors.AnsibleError(
                 "subelements lookup expects a list of two items, first a dict or a list, and second a string")
         terms[0] = utils.listify_lookup_plugin_terms(terms[0], self.basedir, inject)
-        if not isinstance(terms[0], (list, dict)) or not isinstance(terms[1], (list, dict)) or not isinstance(terms[2], basestring):
+        if not isinstance(terms[0], dict) or not isinstance(terms[1], list) or not isinstance(terms[2], basestring):
             raise errors.AnsibleError(
                 "subelements lookup expects a list of two items, first a dict or a list, and second a string")
 
-        if isinstance(terms[0], dict): # convert to list:
-            if terms[0].get('skipped',False) != False:
-                # the registered result was completely skipped
-                return []
-            elementlist = []
-            for key in terms[0].iterkeys():
-                elementlist.append(terms[0][key])
-        else:
-            elementlist = terms[0]
+        elementlist = terms[0]
         filterlist = terms[1]
         subelement = terms[2]
 
         ret = []
-        return elementlist
-        for item0 in elementlist:
-            if not isinstance(item0, dict):
-                raise errors.AnsibleError("subelements lookup expects a dictionary, got '%s'" %item0)
-            if item0.get('skipped',False) != False:
+        for k,v in elementlist.iteritems():
+            if not isinstance(v, dict):
+                raise errors.AnsibleError("subelements lookup expects a dictionary, got '%s'" %v)
+            if v.get('skipped',False) != False:
                 # this particular item is to be skipped
                 continue
-            if not subelement in item0:
-                raise errors.AnsibleError("could not find '%s' key in iterated item '%s'" % (subelement, item0))
-            if not isinstance(item0[subelement], list):
-                raise errors.AnsibleError("the key %s should point to a list, got '%s'" % (subelement, item0[subelement]))
-            sublist = item0.pop(subelement, [])
+            if k not in filterlist:
+                continue
+            if not subelement in v:
+                raise errors.AnsibleError("could not find '%s' key in iterated item '%s'" % (subelement, v))
+            if not isinstance(v[subelement], list):
+                raise errors.AnsibleError("the key %s should point to a list, got '%s'" % (subelement, v[subelement]))
+            sublist = v.pop(subelement, [])
             for item1 in sublist:
-                ret.append((item0, item1))
+                ret.append((v, item1))
 
         return ret
