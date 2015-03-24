@@ -8,7 +8,7 @@
 
 - name: Add {{ group }} user keys
   debug: var=item
-  #debug: var="{{ lookup('file', inventory_dir + '/../files/keys/' + item + '.pub') | join("\n") }}"
+  debug: var="{{ lookup('file', inventory_dir + '/../files/keys/' + item.1 + '.pub') }}"
   #debug: var="{{ lookup('file', inventory_dir + '/../files/keys/' + users[item].keys + '.pub') }}"
   with_filteredsubelements:
     - users
