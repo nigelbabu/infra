@@ -9,8 +9,7 @@ RUN apt-get -y install supervisor
 RUN apt-get -y install python-software-properties mysql-client-5.5
 
 # Install required packages
-RUN add-apt-repository ppa:chris-lea/node.js
-RUN apt-get -y update
+RUN curl -sL https://deb.nodesource.com/setup | bash -
 RUN apt-get -y install nodejs git-core curl python libssl-dev pkg-config build-essential
 
 # Install etherpad-lite
