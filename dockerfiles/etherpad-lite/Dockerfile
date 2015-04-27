@@ -8,8 +8,17 @@ RUN apt-get -y update
 RUN apt-get -y install supervisor
 RUN apt-get -y install python-software-properties mysql-client-5.5
 
-# Install required packages
-RUN curl -sL https://deb.nodesource.com/setup | bash -
+# Add GPG keys for nodesource
+RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+
+# Add nodesource to sources.list
+RUN echo 'deb https://deb.nodesource.com/node_0.10 precise main' >> /etc/apt/sources.list.d/node.list
+RUN echo 'deb-src https://deb.nodesource.com/node_0.10 precise main' >> /etc/apt/sources.list.d/node.list
+
+# Run apt-get update
+RUN apt-get update
+
+# Install package and dependencies
 RUN apt-get -y install nodejs git-core curl python libssl-dev pkg-config build-essential
 
 # Install etherpad-lite
