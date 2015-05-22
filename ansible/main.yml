@@ -3,7 +3,7 @@
 - hosts: all
   sudo: true
   vars:
-     - private_dir: ../../credentials/ansible/
+     - private_dir: ../../credentials/ansible
   vars_files:
     - vars/users.yml
     - vars/groups.yml
@@ -31,6 +31,8 @@
 
 - hosts: omeka
   sudo: true
+  vars:
+     - private_dir: ../../credentials/ansible
   vars_files:
     - "{{ private_dir }}/p.yml"
   roles:
@@ -43,6 +45,8 @@ omeka_db_password: "{{ omeka[1].db_password }}", omeka_db_name: 'espace_omeka' }
 
 - hosts: rt
   sudo: true
+  vars:
+     - private_dir: ../../credentials/ansible
   vars_files:
     - "{{ private_dir }}/p.yml"
   roles:
@@ -60,6 +64,8 @@ omeka_db_password: "{{ omeka[1].db_password }}", omeka_db_name: 'espace_omeka' }
 
 - hosts: openspending-web
   sudo: true
+  vars:
+     - private_dir: ../../credentials/ansible
   vars_files:
     - "{{ private_dir }}/p.yml"
   roles:
@@ -67,6 +73,8 @@ omeka_db_password: "{{ omeka[1].db_password }}", omeka_db_name: 'espace_omeka' }
 
 - hosts: s133.okserver.org
   sudo: true
+  vars:
+     - private_dir: ../../credentials/ansible
   vars_files:
     - "{{ private_dir }}/p.yml"
   roles:
@@ -76,6 +84,8 @@ omeka_db_password: "{{ omeka[1].db_password }}", omeka_db_name: 'espace_omeka' }
 
 - hosts: s134.okserver.org
   sudo: true
+  vars:
+     - private_dir: ../../credentials/ansible
   vars_files:
     - "{{ private_dir }}/p.yml"
   roles:
@@ -91,6 +101,8 @@ omeka_db_password: "{{ omeka[1].db_password }}", omeka_db_name: 'espace_omeka' }
 
 - hosts: s138.okserver.org
   sudo: true
+  vars:
+     - private_dir: ../../credentials/ansible
   vars_files:
     - "{{ private_dir }}/p.yml"
   roles:
@@ -127,6 +139,8 @@ omeka_db_password: "{{ omeka[1].db_password }}", omeka_db_name: 'espace_omeka' }
 
 - hosts: monitoring
   sudo: true
+  vars:
+     - private_dir: ../../credentials/ansible
   vars_files:
     - "{{ private_dir }}/p.yml"
   roles:
@@ -136,6 +150,8 @@ omeka_db_password: "{{ omeka[1].db_password }}", omeka_db_name: 'espace_omeka' }
 
 - hosts: listserv
   sudo: true
+  vars:
+     - private_dir: ../../credentials/ansible
   vars_files:
     - "{{ private_dir }}/p.yml"
   roles:
@@ -146,6 +162,8 @@ omeka_db_password: "{{ omeka[1].db_password }}", omeka_db_name: 'espace_omeka' }
 
 - hosts: docker-host
   sudo: true
+  vars:
+     - private_dir: ../../credentials/ansible
   vars_files:
     - "{{ private_dir }}/p.yml"
   roles:
