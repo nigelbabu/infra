@@ -7,10 +7,6 @@
   with_items: user_groups[group]
 
 - name: Add {{ group }} user keys
-  debug: var=item
-  debug: var="{{ lookup('file', inventory_dir + '/../files/keys/' + item.1 + '.pub') }}"
-  #debug: var="{{ lookup('file', inventory_dir + '/../files/keys/' + users[item].keys + '.pub') }}"
-  with_filteredsubelements:
-    - users
-    - "{{ user_groups[group] }}"
-    - 'keys'
+#debug: var=item
+  debug: var="{{ lookup('file', inventory_dir + '/../files/keys/' + users[item].key + '.pub') }}"
+  with_items: user_groups[group]

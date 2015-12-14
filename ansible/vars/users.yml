@@ -2,85 +2,55 @@
 users:
   rgrp:
     name: 'rgrp'
-    keys:
-      - rgrp
+    key: rgrp
   okfn:
     name: 'okfn'
-    keys:
-      - okfn
+    key: nigelb
   nigelb:
     name: 'nigelb'
-    keys:
-      - nigelb
-  matt:
-    name: 'matt'
-    keys:
-      - matt
+    key: nigelb
   amercader:
-    name: 'matt'
-    keys:
-      - amercader
-  joetsoi:
-    name: 'joetsoi'
-    keys:
-      - joetsoi
+    name: 'amercader'
+    key: amercader
   vitor:
     name: 'vitor'
-    keys:
-      - vitor
-  tryggvib:
-    name: 'tryggvib'
-    keys:
-      - tryggvib
+    key: vitor
   brook:
     name: 'brook'
-    keys:
-      - brook
+    key: brook
   stefan:
     name: 'stefan'
-    keys:
-      - stefan
+    key: stefan
   holger:
     name: 'holger'
-    keys:
-      - holger
+    key: holger
   rowan:
     name: 'rowan.crawford'
-    keys:
-      - rowan.crawford
+    key: rowan.crawford
   joost:
     name: 'joost.cassee'
-    keys:
-      - joost.cassee
+    key: joost.cassee
   yohan:
     name: 'yohan.boniface'
-    keys:
-      - yohan.boniface
+    key: yohan.boniface
   ross:
     name: 'ross.jones'
-    keys:
-      - ross.jones
+    key: ross.jones
   pudo:
     name: 'pudo'
-    keys:
-      - pudo
+    key: pudo
   pierre:
     name: 'pierre.yves'
-    keys:
-      - pierre.yves
+    key: pierre.yves
   umbrich:
     name: 'umbrich'
-    keys:
-      - umbrich
+    key: umbrich
   tonyh:
     name: 'tonyh'
-    keys:
-      - tonyh
+    key: tonyh
   nagios:
     name: 'nagios'
-    keys:
-      - nagios
+    key: nagios
   dfowler:
     name: 'dfowler'
-    keys:
-      - dfowler
+    key: dfowler

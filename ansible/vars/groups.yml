@@ -6,9 +6,7 @@ groups:
     - nigelb
   ckan_dev:
     - amercader
-    - joetsoi
     - vitor
-    - tryggvib
     - brook
   openspending_dev:
     - vitor

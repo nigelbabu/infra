@@ -2,6 +2,7 @@
 ---
 - hosts: all
   sudo: true
+  gather_facts: no
   vars:
      - private_dir: ../../credentials/ansible
   vars_files:
